@@ -1,0 +1,10 @@
+version: "3"
+services:
+  server:
+    image: node:18-alpine
+    volumes: 
+      - ./getting-started-app/:/app/
+    ports:
+      - "3100:3000"
+    working_dir: /app
+    command: node src/index.js
